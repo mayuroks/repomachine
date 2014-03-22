@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+
+program :version, '0.0.1'
+program :description, "** Creating github repos and managing SSH keys made easy **\n\n\tSee git help [command] for commands usage"
+program :help_formatter, :compact
+
+command :create do |c|
+  c.syntax = 'gitshit create [options]'
+  c.summary = 'Create a repo on github'
+  c.description = ''
+  c.example 'description', 'Creates Repo from preset directory'
+  c.example 'create', 'gitshit create -n REPONAME'
+  c.option '--name REPONAME',String,'short alias -n'
+  c.action do |args, options|
+    # Do something or c.when_called Gitshit::Commands::Create
+    #options.default :n => 'whoa_repo',
+    #                :name => 'whoa_repo'
+    say "Creating  #{options.name} Here"
+    system("hub create #{options.name}")
+    url = `git config --get remote.origin.url`
+    system("git remote remove origin")
+    url.sub!(/.com/, "-#{options.name}")
+    system("git remote add origin #{url}")
+    `git remote -v`
+  end
+end
+
+command :show do |c|
+  c.syntax = 'gitshit show [options]'
+  c.summary = 'Show current config'
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Gitshit::Commands::Show
+  end
+end
+
+command :verbose do |c|
+  c.syntax = 'gitshit verbose [options]'
+  c.summary = 'No reason'
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Gitshit::Commands::Verbose
+  end
+end
+
