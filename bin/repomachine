@@ -19,12 +19,21 @@ command :create do |c|
     #options.default :n => 'whoa_repo',
     #                :name => 'whoa_repo'
     say "Creating  #{options.name} Here"
-    system("hub create #{options.name}")
-    url = `git config --get remote.origin.url`
-    system("git remote remove origin")
-    url.sub!(/.com/, "-#{options.name}")
-    system("git remote add origin #{url}")
-    `git remote -v`
+    #system("hub create #{options.name}")
+    #url = `git config --get remote.origin.url`
+    #system("git remote remove origin")
+    #url.sub!(/.com/, "-#{options.name}")
+    #system("git remote add origin #{url}")
+    puts `git remote -v`
+    puts "Creating SSH keys now"
+    puts `ssh-keygen -t rsa -f "#{options.name}_key" -C "github_#{options.name}" -N ""`
+    if File.exist?(File.expand_path("~/.ssh/config2"))
+      puts "CONFIG EXISTS"
+    else
+      puts "CONFIG NOEXIST"
+    end
+    puts "ADD THIS in begining of your #{File.expand_path("~/.ssh/config")}
+    \nHost DAMN\n\tHost da fuck\n\tUser optimus-ODD\n\tIdentityFile ssssshhh\n"
   end
 end
 
