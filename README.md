@@ -1,4 +1,5 @@
 # Repomachine
+[![Build Status](https://secure.travis-ci.org/mayuroks/github.png?branch=master)][travis]
 
 Making Github repos and managing SSH keys made easy. Seriously !!
 ## Installation
