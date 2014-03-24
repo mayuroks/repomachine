@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.executables << "repomachine"
 
   spec.add_dependency "hub", "~> 1.12"
-  spec.add_dependency "octokit", "~> 2.7"
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.1"
 end
