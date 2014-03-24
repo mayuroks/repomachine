@@ -1,7 +1,10 @@
-# Repomachine
 [![Gem Version](https://badge.fury.io/rb/repomachine.png)](http://badge.fury.io/rb/repomachine)
 [![Build Status](https://travis-ci.org/mayuroks/repomachine.svg?branch=v0.3.0-fix)](https://travis-ci.org/mayuroks/repomachine)
+
+# Repomachine
+
 Making Github repos and managing SSH keys made easy. Seriously !!
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -17,9 +20,10 @@ Or install it yourself as:
     $ gem install repomachine
 
 ## Usage
+
 Go inside your project directory. Run the following command
 ```bash
-repomachine create -n myawesomerepo
+$ repomachine create -n myawesomerepo
 ```
 This will initialize current folder, create repo on github, configure origin and 
 create SSH keys in your ~/.ssh folder.
@@ -38,5 +42,5 @@ create SSH keys in your ~/.ssh folder.
 5. Create new Pull Request
 
 ## TODO
-1. Dont create SSH keys for existing repos
+1. Ask users for creating SSH keys for existing repos
 2. Show option to see current directory's config
