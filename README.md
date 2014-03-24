@@ -1,6 +1,5 @@
 # Repomachine
-[![Build Status](https://travis-ci.org/mayuroks/repomachine.svg?branch=master)](https://travis-ci.org/mayuroks/repomachine)
-
+[![Build Status](https://travis-ci.org/mayuroks/repomachine.svg?branch=v0.3.0-fix)](https://travis-ci.org/mayuroks/repomachine)
 Making Github repos and managing SSH keys made easy. Seriously !!
 ## Installation
 
@@ -17,9 +16,16 @@ Or install it yourself as:
     $ gem install repomachine
 
 ## Usage
+Go inside your project directory. Run the following command
+```bash
+repomachine create -n myawesomerepo
+```
+This will initialize current folder, create repo on github, configure origin and 
+create SSH keys in your ~/.ssh folder.
 
-TODO: Write usage instructions here
-
+Two things you will need to do manually (coz I am not a pro)
+1. Update your ~/.ssh/config file
+2. Deploy SSH keys in your Github repo 
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/repomachine/fork )
@@ -30,4 +36,4 @@ TODO: Write usage instructions here
 
 ## TODO
 1. Dont create SSH keys for existing repos
-2. After Keys creation move them to .ssh/ dir
+2. Show option to see current directory's config
