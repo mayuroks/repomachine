@@ -28,7 +28,7 @@ $ repomachine create -n myawesomerepo
 This will initialize current folder, create repo on github, configure origin and 
 create SSH keys in your ~/.ssh folder.
 
-## Manual Stuff (coz I am not a pro)
+## Some manual stuff (coz I am not a pro)
 
 1. Update your ~/.ssh/config file
 2. Deploy SSH keys in your Github repo 
