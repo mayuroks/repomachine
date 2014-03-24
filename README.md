@@ -1,4 +1,5 @@
 # Repomachine
+[![Gem Version](https://badge.fury.io/rb/repomachine.png)](http://badge.fury.io/rb/repomachine)
 [![Build Status](https://travis-ci.org/mayuroks/repomachine.svg?branch=v0.3.0-fix)](https://travis-ci.org/mayuroks/repomachine)
 Making Github repos and managing SSH keys made easy. Seriously !!
 ## Installation
